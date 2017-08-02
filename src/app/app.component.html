@@ -1,0 +1,28 @@
+
+<h2>Contact Tree</h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="MainMenu">
+        <div class="list-group panel">
+          <a href="#1" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu" (click)="collapsedFriends = !collapsedFriends">{{contacts[0].name}}</a>
+          <ul *ngIf="collapsedFriends" class="collapse" id="1">
+            <li class="list-group-item " *ngFor="let contact of contacts[0]['contacts'] | slice:0:2">{{contact.name}}</li>
+            <li style="cursor: pointer" href="#SubMenu1" class="list-group-item " data-toggle="collapse" data-parent="#SubMenu1" (click)="collapsedOldFr = !collapsedOldFr">{{contacts[0]['contacts'][2].name}}</li>
+            <li *ngIf="collapsedOldFr" class="collapse list-group-submenu" id="SubMenu1">
+              <ul>
+                <li class="list-group-item " data-parent="#SubMenu1" *ngFor="let contact of contacts[0]['contacts'][2]['contacts']">{{contact.name}}</li>
+              </ul>
+            </li>
+          </ul>
+          <a  href="#3" class="list-group-item list-group-item" data-toggle="collapse" data-parent="#MainMenu" (click)="collapsedFamily = !collapsedFamily">{{contacts[1].name}}</a>
+          <ul *ngIf="collapsedFamily" class="collapse" id="3">
+            <li class="list-group-item " *ngFor="let contact of contacts[1]['contacts']">{{contact.name}}</li>
+          </ul>
+          <a *ngFor="let contact of contacts | slice:2; let i = index " class="list-group-item" >{{contact.name}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
