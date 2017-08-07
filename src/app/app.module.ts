@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ContactComponent } from './contact/contact.component';
+import { CollapseDirective } from './collapse.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactComponent,
+    CollapseDirective
   ],
   imports: [
     BrowserModule,
