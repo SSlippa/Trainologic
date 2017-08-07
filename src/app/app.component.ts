@@ -36,8 +36,4 @@ export class AppComponent {
     {id: 8, name: 'Ori', type: 'Contact'},
   ];
 
-  collapsedFriends = false;
-  collapsedOldFr = false;
-  collapsedFamily = false;
-
 }

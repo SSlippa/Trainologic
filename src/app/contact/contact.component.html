@@ -1,9 +1,9 @@
-<div class="list-group-item">
-  <div (click)="func()" >{{ contact.name }}</div>
+<ul >
+  <li class="list-group-item" (click)="collpaseFunc()" >{{ contact.name }}</li>
   <app-contact
     [ngStyle]="{'display': collapse === true ? 'none' : 'block' }"
     *ngFor="let cont of contact.contacts"
     [contact]="cont">
   </app-contact>
-</div>
+</ul>
 

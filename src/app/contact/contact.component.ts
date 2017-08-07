@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  func(id) {
+  collpaseFunc() {
     this.collapse = !this.collapse;
   }
 
