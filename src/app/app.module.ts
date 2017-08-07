@@ -5,13 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
-import { CollapseDirective } from './collapse.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent,
-    CollapseDirective
+    ContactComponent
   ],
   imports: [
     BrowserModule,
