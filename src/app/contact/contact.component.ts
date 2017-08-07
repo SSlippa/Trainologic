@@ -8,18 +8,16 @@ import {Contact} from './contact.model';
 })
 export class ContactComponent implements OnInit {
   @Input() contact: Contact;
-  collapsedFriends = true;
-  collapsedOldFr = false;
-  collapsedFamily = false;
+  collapse = true;
 
-  constructor(private renderer: Renderer2) { }
+
+  constructor() { }
 
   ngOnInit() {
   }
 
   func(id) {
-    console.log(id);
-
+    this.collapse = !this.collapse;
   }
 
 }

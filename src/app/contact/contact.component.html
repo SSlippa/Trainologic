@@ -1,9 +1,9 @@
 <div class="list-group-item">
   <div (click)="func(contact.id)" >{{ contact.name }}</div>
   <app-contact
-
+    [ngStyle]="{'display': collapse === true ? 'none' : 'block' }"
     *ngFor="let cont of contact.contacts"
     [contact]="cont">
   </app-contact>
 </div>
-<!--[ngClass]="{'collapse': cont.type === 'Group' || 'Contact' && cont.id != contact.id}"-->
+
