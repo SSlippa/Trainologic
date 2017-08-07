@@ -8,7 +8,7 @@ import {Contact} from './contact.model';
 })
 export class ContactComponent implements OnInit {
   @Input() contact: Contact;
-  collapse = true;
+  collapse = false;
 
 
   constructor() { }
@@ -16,8 +16,10 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  collpaseFunc() {
-    this.collapse = !this.collapse;
+  collpaseFunc(contact: Contact) {
+    if (contact.type !== 'Contact') {
+      this.collapse = !this.collapse;
+    }
   }
 
 }
